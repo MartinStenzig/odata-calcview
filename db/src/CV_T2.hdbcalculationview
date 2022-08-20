@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_T2" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="CV_T2"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="RIZ_INNO_SALESORDERS">
+    <resourceUri>RIZ_INNO_SALESORDERS</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+
+<logicalModel id="RIZ_INNO_SALESORDERS">
+  <attributes>
+    <attribute id="ORDERID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORDERID"/>
+      <keyMapping columnObjectName="RIZ_INNO_SALESORDERS" columnName="ORDERID"/>
+    </attribute>
+    <attribute id="DESCRIPTION" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DESCRIPTION"/>
+      <keyMapping columnObjectName="RIZ_INNO_SALESORDERS" columnName="DESCRIPTION"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="ORDVALUE" order="3" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ORDVALUE"/>
+      <measureMapping columnObjectName="RIZ_INNO_SALESORDERS" columnName="ORDVALUE"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>
