@@ -1,0 +1,11 @@
+@server=https://riz-inno-sbx-odata-calcview-srv.cfapps.us10.hana.ondemand.com
+@service=/admin
+
+
+### Request all values
+GET {{server}}{{service}}/CV_t2
+
+### Request all values
+GET {{server}}{{service}}/CV_t2?$apply=aggregate(ORDVALUE with sum as Total)
+
+
