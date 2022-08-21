@@ -49,10 +49,18 @@
   "cds": {
     "requires": {
       "auth": {
-        "kind": "xsuaa"
+        "kind": "dummy-auth"
       },
       "db": {
-        "kind": "hana-cloud"
+        "kind": "sql"
+      },
+      "[production]": {
+        "auth": {
+          "kind": "dummy-auth"
+        },
+        "db": {
+          "kind": "hana-cloud"
+        }
       }
     }
   }
